@@ -1,0 +1,64 @@
+/*Colors Variable*/
+:root {
+  --primary-color: #FFFFFF;
+  --second-color: #04B3E0; /*Blue 500*/
+
+  --background-color: #F2F7F9;
+  --trasnparent-color: transparent;
+
+  --icon-color: #B5B6B7;
+  --title-color: #222;
+  --subtitle-color: #888;
+  --text-color: #555;
+}
+
+/*Styles generals*/
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--title-color);
+}
+
+/*Imagen de fondo*/
+body {
+  background-image: url(../img/fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -20px -120px;
+}
+
+
+/*Estructura principal*/
+.layout {
+  position: relative;
+  
+  width: 75%;
+  height: 80vh; /*altura del navegador*/
+  min-height: 80vh;
+  margin: 10vh auto;
+
+  display: grid;
+  grid-template-areas: 
+    "aside content";
+  grid-template-columns: 30% 70%;
+
+  /*Sombra layout*/
+  border-radius: 4rem;
+  box-shadow: 0 0 100px -5px rgb(0, 0 ,0  0.25);
+
+
+  border: 1px solid red;
+
+}
