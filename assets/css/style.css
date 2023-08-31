@@ -39,13 +39,11 @@ body {
   background-position: -20px -120px;
 }
 
-
 /*Estructura principal*/
 .layout {
   position: relative;
   width: 75%;
   height: 80vh; /*altura del navegador*/
-  min-height: 80vh;
   margin: 10vh auto;
 
   display: grid;
@@ -56,19 +54,14 @@ body {
   /*Sombra layout*/
   border-radius: 4rem;
   box-shadow: 0 0 100px -5px rgba(0, 0 ,0,  0.25);
-
-
-
 }
 
 /* Barra lateral azul*/
 .layout__aside {
   grid-area: aside;
-  
   border-radius: 4rem 0 0 4rem;
   overflow: auto;
   overflow-x: hidden;
-
 }
 
 .aside__user-info {
@@ -84,6 +77,32 @@ body {
   color: var(--primary-color);
 }
 
+.aside__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  min-height: 100%;
+  min-width: 30rem;
+
+  background-color: var(--second-color);
+  color: var(--primary-color);
+}
+
+.aside__user-sobremi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  max-height: 75%;
+  min-width: 30rem;
+
+  background-color: var(--second-color);
+  color: var(--primary-color);
+}
+
 .user-info__container-image {
   position: relative;
   display: inline-block;
@@ -91,9 +110,6 @@ body {
   margin-top: 7rem;
   z-index: 1;
 }
-
-
-
 
 .user-info__image {
   width: 100%;
@@ -192,16 +208,24 @@ body {
 .layout__content{
   grid-area: content;
   height: 100%;
-  min-width: 100%;
+  max-width: 100%;
+  background-color: var(--second-color);
+  border-radius: 0 10rem 10rem 0;
+}
+
+.layout__content-sobremi{
+  grid-area: content;
+  height: 100%;
+  max-height: 75%;
+  max-width: 100%;
   background-color: var(--second-color);
   border-radius: 0 10rem 10rem 0;
 }
 
 .content__page {
-  min-height: 100%;
   background-color: var(--primary-color);
   border-radius: 3.2rem;
-
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,7 +251,6 @@ body {
   top: 0;
   right: -105px;
   min-width: 11rem;
-
   background-color: var(--trasnparent-color);
 }
 
@@ -290,9 +313,121 @@ body {
   min-height: 100%;
   padding: 6rem;
   padding-right: 2.9rem;
-  overflow: auto;
-  
+  overflow: auto; 
 }
 
+.about__header{
+  display: inline-block;
+  margin-bottom: 4.5rem;
+}
 
+.about__title{
+  font-size: 3.2rem;
+  position: relative;
+}
 
+.about__title::after{
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -25px;
+  width: 50px;
+  height: 30px;
+  background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
+  background-size: 6px 6px;
+}
+
+.title__color{
+  color: var(--second-color);
+}
+
+.about__personal-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.personal-info__bio {
+  flex-basis: 56%;
+}
+
+.personal-info__data {
+  flex-basis: 44%;
+  padding: 0 1.5rem;
+}
+
+.personal-info__description {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+.personal-info__option {
+  margin-bottom: 1rem;
+}
+
+.personal-info__title {
+  margin-right: 0.5rem;
+  color: var(--second-color);
+  font-weight: 600;
+}
+
+/* SERVICES */
+
+.about__services {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.services__header{
+  display: inline-block;
+  padding: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.services__title {
+  font-size: 2.1rem;
+}
+
+.services__title::after{
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  width: 30px;
+  height: 20px;
+  background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
+  background-size: 6px 6px;
+  opacity: 0.5;
+}
+
+.services__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.services__service{
+  flex-basis: cal(50% -3rem);
+  margin-right: 3rem;
+  margin-bottom: 2.5rem;
+
+}
+
+.service__real-icon {
+  color: var(--second-color);
+  font-size: 3.8rem;
+}
+
+.service__title {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.service__description {
+  font-size: 1.5rem;
+  text-align: justify;
+  max-width: 100%;
+}
