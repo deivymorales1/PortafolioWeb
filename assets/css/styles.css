@@ -6,9 +6,9 @@
   --background-color: #F2F7F9;
   --trasnparent-color: transparent;
 
-  --icon-color: #B5B6B7;
-  --title-color: #222;
-  --subtitle-color: #888;
+  --icons-color: #B5B6B7;
+  --titles-color: #222;
+  --subtitles-color: #888;
   --text-color: #555;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  color: var(--title-color);
+  color: var(--titles-color);
 }
 
 /*Imagen de fondo*/
@@ -42,8 +42,10 @@ body {
 /*Estructura principal*/
 .layout {
   position: relative;
+  min-width: 1290px;
   width: 75%;
   height: 80vh; /*altura del navegador*/
+  min-height: 80vh;
   margin: 10vh auto;
 
   display: grid;
@@ -53,7 +55,7 @@ body {
 
   /*Sombra layout*/
   border-radius: 4rem;
-  box-shadow: 0 0 100px -5px rgba(0, 0 ,0,  0.25);
+  box-shadow: 0 0 100px -5px rgba(0, 0, 0, 0.25);
 }
 
 /* Barra lateral azul*/
@@ -71,32 +73,6 @@ body {
   text-align: center;
 
   min-height: 100%;
-  min-width: 30rem;
-
-  background-color: var(--second-color);
-  color: var(--primary-color);
-}
-
-.aside__user-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  min-height: 100%;
-  min-width: 30rem;
-
-  background-color: var(--second-color);
-  color: var(--primary-color);
-}
-
-.aside__user-sobremi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  max-height: 75%;
   min-width: 30rem;
 
   background-color: var(--second-color);
@@ -129,7 +105,7 @@ body {
   background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
   background-size: 0.6rem 0.6rem;
   opacity: 0.4;
-  border-radius: 20rem;
+  border-radius: 30rem;
 
 }
 
@@ -162,7 +138,7 @@ body {
 .social__option {
   height: 3rem;
   width: 3rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 3.2rem;
   opacity: 0.9;
   border-radius: 3rem;
@@ -202,30 +178,22 @@ body {
 
 }
 
-
-
 /*Contenedor principal*/
 .layout__content{
   grid-area: content;
   height: 100%;
-  max-width: 100%;
-  background-color: var(--second-color);
-  border-radius: 0 10rem 10rem 0;
-}
+  min-height: 100%;
 
-.layout__content-sobremi{
-  grid-area: content;
-  height: 100%;
-  max-height: 75%;
-  max-width: 100%;
   background-color: var(--second-color);
   border-radius: 0 10rem 10rem 0;
 }
 
 .content__page {
+  min-height: 100%;
   background-color: var(--primary-color);
   border-radius: 3.2rem;
-  height: 100%;
+  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,7 +208,7 @@ body {
 .page__job {
   font-size: 2.1rem;
   font-weight: lighter;
-  color: var(--subtitle-color);
+  color: var(--subtitles-color);
 }
 
 /*Menu navegacion lateral*/
@@ -277,7 +245,7 @@ body {
 }
 
 .menu__icon{
-  color: var(--icon-color);
+  color: var(--icons-color);
   font-size: 2.8rem;
   transition: all 300ms ease-in-out;
 }
@@ -304,29 +272,31 @@ body {
   right: 100%;
 }
 
-
-/*ABOUT ME*/
-
-.content__about {
+/*Styles Generals about  me*/
+.content__about,
+.content__resume {
   display: block;
   height: 100%;
   min-height: 100%;
   padding: 6rem;
-  padding-right: 2.9rem;
+  padding-right: 3rem;
   overflow: auto; 
 }
 
-.about__header{
+.about__header,
+.resume__header {
   display: inline-block;
   margin-bottom: 4.5rem;
 }
 
-.about__title{
+.about__title,
+.resume__title {
   font-size: 3.2rem;
   position: relative;
 }
 
-.about__title::after{
+.about__title::after,
+.resume__title::after {
   content: "";
   position: absolute;
   top: 20px;
@@ -335,9 +305,11 @@ body {
   height: 30px;
   background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
   background-size: 6px 6px;
+  opacity: 0.5;
 }
 
-.title__color{
+.title__color,
+.subtitle__color {
   color: var(--second-color);
 }
 
@@ -352,14 +324,14 @@ body {
   flex-basis: 56%;
 }
 
-.personal-info__data {
-  flex-basis: 44%;
-  padding: 0 1.5rem;
-}
-
 .personal-info__description {
   font-size: 1.5rem;
   line-height: 2.4rem;
+}
+
+.personal-info__data {
+  flex-basis: 44%;
+  padding: 0 1.5rem;
 }
 
 .personal-info__option {
@@ -370,6 +342,54 @@ body {
   margin-right: 0.5rem;
   color: var(--second-color);
   font-weight: 600;
+}
+
+/*Estilos generales compartidos about y otras secciones*/
+.about__services,
+.about__reviews,
+.about__clients,
+.about__prices,
+.about__extra {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.services__header,
+.reviews__header,
+.clients__header,
+.prices__header,
+.extra__header,
+.resume__subheader {
+  display: inline-block;
+  padding-right: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.services__title,
+.reviews__title,
+.clients__title,
+.prices__title,
+.extra__title,
+.resume__subtitle {
+  font-size: 2.1rem;
+}
+
+.services__title::after,
+.reviews__title::after,
+.clients__title::after,
+.prices__title::after,
+.extra__title::after,
+.resume__subtitle::after{
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  width: 30px;
+  height: 20px;
+  background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
+  background-size: 6px 6px;
+  opacity: 0.5;
 }
 
 /* SERVICES */
@@ -430,4 +450,104 @@ body {
   font-size: 1.5rem;
   text-align: justify;
   max-width: 100%;
+}
+
+/*Curriculum*/
+.resume__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+/*Curriculum izquierda*/
+.resume__left {
+  flex-basis: 58%;
+  margin-right: 1.5rem;
+}
+
+.resume__timelines {
+  margin-bottom: 5rem;
+}
+
+.timelines__timeline {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline__header {
+  flex-basis: 30%;
+  text-align: right;
+  padding-right: 2.5rem;
+}
+
+.timeline__year {
+  margin: 0.3rem 0;
+  line-height: 1.9rem;
+  font-size: 1.4rem;
+}
+
+.timeline__company {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: lighter; 
+  color: var(--text-color);
+}
+
+.timeline__description {
+  width: 70%;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+}
+
+.timeline__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__text {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.timeline__divider {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  bottom: -18px;
+  width: 1px;
+  background-color: var(--subtitle-color);
+}
+
+.timeline__divider::before {
+  content: "";
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: -0.8rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: var(--second-color);
+  border-radius: 10rem;
+  opacity: 0.25;
+}
+
+.timeline__divider::after {
+  content: "";
+  position: absolute;
+  margin-top: 0.8rem;
+  margin-left: -0.4rem;
+  width:0.9rem;
+  height: 0.9rem;
+  background-color: var(--primary-color);
+  border-radius: 10rem;
+  border: 2px solid var(--second-color);
+  opacity: 1;
+}
+
+/*Curriculum derecha*/
+.resume__right {
+  flex-basis: 41%;
 }
