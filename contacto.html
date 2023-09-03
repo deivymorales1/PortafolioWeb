@@ -6,9 +6,7 @@
   <title>Document</title>
   <!-- Styles -->
   <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
-  <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/scroll.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
@@ -23,7 +21,6 @@
           <div class="user-info__container-image">
             <img src="./assets/img/perfil.jpg
             " class="user-info__image" alt="Foto de perfil del usuario" />
-            <!--Aqui va la sombra-->
           </div>
           <h2 class="user-info__name">Deivy Rocha</h2>
           <h4 class="user-info__job">Desarrollador Web</h4>
@@ -32,7 +29,7 @@
         <nav class="layout__menu">
           <ul class="menu__list">
             <li class="menu__option">
-              <a href="index.html" class="menu__link menu__link--active">
+              <a href="index.html" class="menu__link">
                 <i class="menu__icon fa-solid fa-house"></i>
                 <span class="menu__overlay">Home</span>
               </a>
@@ -56,12 +53,11 @@
               </a>
             </li>
             <li class="menu__option">
-              <a href="contacto.html" class="menu__link">
+              <a href="contacto.html" class="menu__link menu__link--active">
                 <i class="menu__icon fa-solid fa-envelope"></i>
                 <span class="menu__overlay">Contacto</span>
               </a>
             </li>
-            
           </ul>
         </nav>
         <!-- Links a redes sociales -->
@@ -90,7 +86,7 @@
             Descargar CV
           </a>
         </div>
-        <!-- Footer -->
+        <!-- Pie de pagina -->
         <footer class="user-info__footer">
           &copy; 2023 Deivy Rocha Web
         </footer>
@@ -98,9 +94,53 @@
     </aside>
     <!-- Contenido principal -->
     <main class="layout__content">
-      <section class="content__page">
-        <h1 class="page__name">Deivy Rocha</h1>
-        <h2 class="page__job">Desarrollador Web</h2>
+      <section class="content__page content__contact">
+        <!--Este contenido cambia en cada pagina del sitio web-->
+        
+        <header class="contact__header">
+          <h1 class="contact__title"> Contacto </h1>
+        </header>
+
+        <div class="contact__container">
+          <section class="contact__info">
+            <div class="contact__data">
+              <i class="contact__icon fa-solid fa-location-dot "></i>
+              <h2 class="contact__subtitle">Bucaramanga</h2>
+            </div>
+
+            <div class="contact__data">
+              <i class="contact__icon fa-solid fa-phone "></i>
+              <h2 class="contact__subtitle">3184996956</h2>
+            </div>
+
+            <div class="contact__data">
+              <i class="contact__icon fa-solid fa-envelope"></i>
+              <h2 class="contact__subtitle">developerdeivymorales@gmail.com</h2>
+            </div>
+
+            <div class="contact__data">
+              <i class="contact__icon fa-solid fa-location-dot "></i>
+              <h2 class="contact__subtitle">Desarrollador Web</h2>
+            </div>
+
+          </section>
+
+          <section class="contact__form">
+            
+            <div class="contact__map">
+
+            </div>
+
+            <header class="contact__form-header">
+              <h3 class="contact__subtitle">
+                ¿Como puedo <span class="subtitle__color">ayudarte?</span> 
+              </h3>
+            </header>
+
+          </section>
+        </div>
+
+
       </section>
     </main>
 

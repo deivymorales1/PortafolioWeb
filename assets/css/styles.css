@@ -10,6 +10,11 @@
   --titles-color: #222;
   --subtitles-color: #888;
   --text-color: #555;
+
+  --color-border-reviews: #E5E6E7;
+  --color-company: #A5A6A7;
+
+  --color-background-certificate: #F5F5F5;
 }
 
 /*Styles generals*/
@@ -128,27 +133,31 @@ body {
 }
 
 .links__social {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.7rem;
 }
 
 .social__option {
-  height: 3rem;
-  width: 3rem;
-  font-size: 2rem;
+  height: 8rem;
+  width: 8rem;
   line-height: 3.2rem;
   opacity: 0.9;
   border-radius: 3rem;
   transition: all 300ms linear ease-in-out;
 }
 
-.social__option:hover{
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.20);
+.social__icon {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
 }
+
+/*Boton del curriculum*/
 
 .user-info__buttons{
   margin-top: 2rem;
@@ -274,7 +283,9 @@ body {
 
 /*Styles Generals about  me*/
 .content__about,
-.content__resume {
+.content__resume,
+.content__portfolio,
+.content__contact {
   display: block;
   height: 100%;
   min-height: 100%;
@@ -284,19 +295,25 @@ body {
 }
 
 .about__header,
-.resume__header {
+.resume__header,
+.portfolio__header,
+.contact__header {
   display: inline-block;
   margin-bottom: 4.5rem;
 }
 
 .about__title,
-.resume__title {
+.resume__title,
+.portfolio__title,
+.contact__title {
   font-size: 3.2rem;
   position: relative;
 }
 
 .about__title::after,
-.resume__title::after {
+.resume__title::after,
+.portfolio__title::after,
+.contact__title::after {
   content: "";
   position: absolute;
   top: 20px;
@@ -550,4 +567,186 @@ body {
 /*Curriculum derecha*/
 .resume__right {
   flex-basis: 41%;
+  padding: 0 1.5rem;
+}
+
+.resume__skills {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skills__option {
+  padding: 0.4rem 1rem;
+  margin: 0.3rem 0.3rem;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+  
+}
+
+.knowledges__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.knowledges__option {
+  padding: 0.4rem 1rem;
+  margin: 0.3rem 0.3rem;
+  font-size: 1.4rem;
+  background-color: var(--second-color);
+  border-radius: 0.3rem;
+  color: var(--primary-color);
+}
+
+.certificates__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.certificates__certificate {
+  flex-basis: cal(50% - 1.5rem) ;
+  border: 2px solid var(--color-border-reviews);
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.certificate__logo {
+  width: 15rem;
+  height: 100%;
+  padding: 2.5rem;
+  background-color: var(--color-background-certificate);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.certificate__img {
+  width: 100%;
+}
+
+.certificate__content {
+  padding: 2rem 2.5rem;
+}
+
+.certificate__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.certificate__id {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+  color: var(--subtitles-color);
+}
+
+.certificate__date {
+  font-size: 1.2rem;
+  color: var(--subtitles-color);
+  opacity: 0.9;
+}
+
+/*PORTFOLIO*/
+
+.portfolio__navbar {
+  margin-bottom: 3rem;
+}
+
+.portfolio__menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.portfolio__option {
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+
+.portfolio__option--active {
+  opacity: 1;
+}
+
+.portfolio__link {
+  cursor: pointer;
+  color: var(--subtitles-color);
+}
+
+.portfolio__link:hover{
+  color: var(--second-color);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio__gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery__item {
+  position: relative;
+  flex-basis: 33%;
+  padding: 0.7rem;
+}
+
+.gallery__container-image {
+  overflow: hidden;
+}
+
+.gallery__image {
+  transition: all 300ms  ease-in-out;
+}
+
+.gallery__item:hover .gallery__image {
+  transform: scale(1.1);
+}
+
+.gallery__title {
+  font-size: 1.6rem;
+  padding: 1.5rem 0;
+  font-weight: bold;
+}
+
+.gallery__icon {
+  opacity: 0;
+  position: absolute;
+  top: 1.4rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 3rem;
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  transition: all 400ms ease-in-out;
+}
+
+.gallery__category {
+  opacity: 0;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  transition: all 400ms ease-in-out;
+}
+
+.gallery__item:hover .gallery__icon,
+.gallery__item:hover .gallery__category {
+  opacity: 1;
 }
