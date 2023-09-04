@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Contacto</title>
   <!-- Styles -->
   <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/scroll.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/loader.css">k
+  <script src="./assets/js/map.js" defer></script>
 </head>
 <body>
 
@@ -64,17 +67,17 @@
         <div class="user-info__links">
           <ul class="links__social">
             <li class="social__option">
-              <a href="#" class="social__link">
+              <a href="https://discord.com/channels/@deivyjesidrochamorales" target="_blank" target="_blank" class="social__link">
                 <img src="assets/img/discord.svg" class="social__icon"></img>
               </a>
             </li>
             <li class="social__option">
-              <a href="#" class="social__link">
+              <a href="https://www.instagram.com/deivymorales1/?hl=es-la" target="_blank" class="social__link">
                 <img src="assets/img/instagram.svg" class="social__icon"></img>
               </a>
             </li>
             <li class="social__option">
-              <a href="#" class="social__link">
+              <a href="https://www.linkedin.com/in/deivy-jesid-rocha-morales-0641951a6/" target="_blank" class="social__link">
                 <img src="assets/img/linkedin.svg" class="social__icon"></img>
               </a>
             </li>
@@ -105,7 +108,7 @@
           <section class="contact__info">
             <div class="contact__data">
               <i class="contact__icon fa-solid fa-location-dot "></i>
-              <h2 class="contact__subtitle">Bucaramanga</h2>
+              <h2 class="contact__subtitle">Floridablanca</h2>
             </div>
 
             <div class="contact__data">
@@ -119,23 +122,50 @@
             </div>
 
             <div class="contact__data">
-              <i class="contact__icon fa-solid fa-location-dot "></i>
+              <i class="contact__icon fa-solid fa-check "></i>
               <h2 class="contact__subtitle">Desarrollador Web</h2>
             </div>
 
           </section>
 
-          <section class="contact__form">
+          <section class="contact__form-box">
             
-            <div class="contact__map">
-
+            <div class="contact__map" id="load-iframe-map">
+              <span class="loader"></span>
             </div>
 
             <header class="contact__form-header">
-              <h3 class="contact__subtitle">
+              <h3 class="form-header__title">
                 ¿Como puedo <span class="subtitle__color">ayudarte?</span> 
               </h3>
             </header>
+
+            <form class="contact__form">
+              <div class="form__container">
+                <section class="form__left">
+                  <div class="form__group">
+                    <input type="text" class="form__input" name="name" required placeholder="Nombre" />
+                    <label for="name" class="form__label">Nombre</label>
+                  </div>
+                  <div class="form__group">
+                    <input type="email" class="form__input" name="email" required placeholder="Email" />
+                    <label for="email" class="form__label">Email</label>
+                  </div>
+                  <div class="form__group">
+                    <input type="text" class="form__input" name="subject" required placeholder="Subject" />
+                    <label for="subject" class="form__label">Asunto</label>
+                  </div>
+                </section>
+                <section class="form__right" >
+                  <div class="form__group form__group--textarea">
+                    <textarea class="form__input form__input--textarea" name="message" required placeholder="Mensaje"></textarea>
+                    <label for="message" class="form__label">Mensaje</label>
+                  </div>
+                </section>
+              </div>
+              <input type="submit" class="form__button" value="Enviar mensaje">
+
+            </form>
 
           </section>
         </div>
