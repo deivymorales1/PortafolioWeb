@@ -1,21 +1,21 @@
 /*Colors Variable*/
 :root {
-  --primary-color: #FFFFFF;
-  --second-color: #04B3E0; /*Blue 500*/
+  --primary-color: #ffffff;
+  --second-color: #04b3e0; /*Blue 500*/
 
-  --background-color: #F2F7F9;
+  --background-color: #f2f7f9;
   --trasnparent-color: transparent;
 
-  --icons-color: #B5B6B7;
+  --icons-color: #b5b6b7;
   --titles-color: #222;
   --subtitles-color: #888;
   --text-color: #555;
 
-  --color-border-reviews: #E5E6E7;
-  --color-company: #A5A6A7;
+  --color-border-reviews: #e5e6e7;
+  --color-company: #a5a6a7;
 
-  --color-background-certificate: #F5F5F5;
-  --color-background-contact: #FCFCFC;
+  --color-background-certificate: #f5f5f5;
+  --color-background-contact: #fcfcfc;
 }
 
 /*Styles generals*/
@@ -33,7 +33,12 @@ body {
   overflow: hidden;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--titles-color);
 }
 
@@ -55,8 +60,7 @@ body {
   margin: 10vh auto;
 
   display: grid;
-  grid-template-areas: 
-    "aside content";
+  grid-template-areas: "aside content";
   grid-template-columns: 30% 70%;
 
   /*Sombra layout*/
@@ -108,11 +112,16 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    #fff,
+    #fff 1px,
+    transparent 0px,
+    transparent 100%
+  );
   background-size: 0.6rem 0.6rem;
   opacity: 0.4;
   border-radius: 30rem;
-
 }
 
 .user-info__name {
@@ -130,7 +139,6 @@ body {
 
 .user-info__links {
   margin-bottom: 3.6rem;
-
 }
 
 .links__social {
@@ -160,12 +168,12 @@ body {
 
 /*Boton del curriculum*/
 
-.user-info__buttons{
+.user-info__buttons {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
-.user-info__btn{
+.user-info__btn {
   padding: 3rem;
   padding-top: 1.3rem;
   padding-bottom: 1.3rem;
@@ -176,7 +184,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.user-info__btn:hover{
+.user-info__btn:hover {
   background-color: var(--primary-color);
   color: var(--second-color);
 }
@@ -185,11 +193,10 @@ body {
   position: absolute;
   bottom: 2rem;
   font-size: 1.2rem;
-
 }
 
 /*Contenedor principal*/
-.layout__content{
+.layout__content {
   grid-area: content;
   height: 100%;
   min-height: 100%;
@@ -202,7 +209,6 @@ body {
   min-height: 100%;
   background-color: var(--primary-color);
   border-radius: 3.2rem;
-  
 
   display: flex;
   flex-direction: column;
@@ -232,7 +238,7 @@ body {
   background-color: var(--trasnparent-color);
 }
 
-.menu__list{
+.menu__list {
   position: relative;
 
   display: flex;
@@ -248,23 +254,23 @@ body {
   border-radius: 6rem;
 }
 
-.menu__option{
+.menu__option {
   display: block;
   width: 100%;
   text-align: center;
 }
 
-.menu__icon{
+.menu__icon {
   color: var(--icons-color);
   font-size: 2.8rem;
   transition: all 300ms ease-in-out;
 }
 
-.menu__option:hover .menu__icon{
+.menu__option:hover .menu__icon {
   color: var(--second-color);
 }
 
-.menu__overlay{
+.menu__overlay {
   position: absolute;
   right: 0;
   margin-top: -3rem;
@@ -277,7 +283,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.menu__option:hover .menu__overlay{
+.menu__option:hover .menu__overlay {
   opacity: 1;
   right: 100%;
 }
@@ -292,7 +298,7 @@ body {
   min-height: 100%;
   padding: 6rem;
   padding-right: 3rem;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .about__header,
@@ -321,7 +327,13 @@ body {
   right: -25px;
   width: 50px;
   height: 30px;
-  background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    var(--second-color),
+    var(--second-color) 1px,
+    transparent 0px,
+    transparent 100%
+  );
   background-size: 6px 6px;
   opacity: 0.5;
 }
@@ -331,7 +343,7 @@ body {
   color: var(--second-color);
 }
 
-.about__personal-info{
+.about__personal-info {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -401,14 +413,20 @@ body {
 .prices__title::after,
 .extra__title::after,
 .resume__subtitle::after,
-.form-header__title::after{
+.form-header__title::after {
   content: "";
   position: absolute;
   top: 15px;
   right: 0px;
   width: 30px;
   height: 20px;
-  background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    var(--second-color),
+    var(--second-color) 1px,
+    transparent 0px,
+    transparent 100%
+  );
   background-size: 6px 6px;
   opacity: 0.5;
 }
@@ -420,7 +438,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.services__header{
+.services__header {
   display: inline-block;
   padding: 1.2rem;
   margin-bottom: 2.5rem;
@@ -431,14 +449,20 @@ body {
   font-size: 2.1rem;
 }
 
-.services__title::after{
+.services__title::after {
   content: "";
   position: absolute;
   top: 15px;
   right: 0px;
   width: 30px;
   height: 20px;
-  background-image: -webkit-repeating-radial-gradient(center center, var(--second-color), var(--second-color) 1px, transparent 0px, transparent 100%);
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    var(--second-color),
+    var(--second-color) 1px,
+    transparent 0px,
+    transparent 100%
+  );
   background-size: 6px 6px;
   opacity: 0.5;
 }
@@ -450,11 +474,10 @@ body {
   flex-wrap: wrap;
 }
 
-.services__service{
+.services__service {
   flex-basis: cal(50% -3rem);
   margin-right: 3rem;
   margin-bottom: 2.5rem;
-
 }
 
 .service__real-icon {
@@ -478,7 +501,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-
 }
 
 /*Curriculum izquierda*/
@@ -514,7 +536,7 @@ body {
 .timeline__company {
   display: block;
   font-size: 1.3rem;
-  font-weight: lighter; 
+  font-weight: lighter;
   color: var(--text-color);
 }
 
@@ -560,7 +582,7 @@ body {
   position: absolute;
   margin-top: 0.8rem;
   margin-left: -0.4rem;
-  width:0.9rem;
+  width: 0.9rem;
   height: 0.9rem;
   background-color: var(--primary-color);
   border-radius: 10rem;
@@ -590,10 +612,9 @@ body {
   margin: 0.3rem 0.3rem;
   font-size: 1.4rem;
   border-radius: 0.3rem;
-  
 }
 
-.knowledges__list{
+.knowledges__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -616,7 +637,7 @@ body {
 }
 
 .certificates__certificate {
-  flex-basis: cal(50% - 1.5rem) ;
+  flex-basis: cal(50% - 1.5rem);
   border: 2px solid var(--color-border-reviews);
   border-radius: 0.8rem;
 
@@ -632,7 +653,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .certificate__img {
@@ -688,7 +708,7 @@ body {
   color: var(--subtitles-color);
 }
 
-.portfolio__link:hover{
+.portfolio__link:hover {
   color: var(--second-color);
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
 }
@@ -710,7 +730,7 @@ body {
 }
 
 .gallery__image {
-  transition: all 300ms  ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .gallery__item:hover .gallery__image {
@@ -781,7 +801,7 @@ body {
   color: var(--second-color);
 }
 
-.contact__subtitle{
+.contact__subtitle {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
@@ -799,7 +819,6 @@ body {
 .form__left {
   flex-basis: 47%;
   margin-right: 1.5rem;
-
 }
 
 .form__group {
@@ -820,10 +839,9 @@ body {
   box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.15);
   background: 0 0;
   background-color: transparent;
-
 }
 
-.form__input:focus{
+.form__input:focus {
   border: 0.2rem solid var(--second-color);
 }
 
@@ -836,8 +854,8 @@ body {
   pointer-events: none;
 }
 
-.form__input:focus~label,
-.form__input:not(:placeholder-shown)~label {
+.form__input:focus ~ label,
+.form__input:not(:placeholder-shown) ~ label {
   top: -2rem;
   left: 0;
   z-index: 1;
@@ -852,7 +870,6 @@ body {
 .form__input::-moz-placeholder {
   color: transparent;
 }
-
 
 .form__right {
   flex-basis: 50%;
@@ -882,7 +899,7 @@ body {
   transition: all 300 ease-in-out;
 }
 
-.form__button:hover{
+.form__button:hover {
   background-color: var(--second-color);
   color: var(--primary-color);
 }
